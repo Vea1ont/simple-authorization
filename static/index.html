@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZType</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav class="nav-bar">
+                <div class="left-section">
+
+                    <button class="z" onclick="showMain()" >
+                        <img src="/static/logos/ztype.png" alt="z">
+                    </button>
+
+                    <ul class="nav-links">
+                        <li> <a href="#">Home</a> </li> 
+                        <li> <a href="#">Blog</a> </li>
+                        <li> <a href="#">Features</a> </li>
+                        <li> <a href="#">Pricing</a> </li>
+                        <li> <a href="#">Documentation</a> </li>
+                    </ul>
+                </div>
+                
+                <div class="right-section">
+                    <div class="nav-icons">
+                        <a href="#">
+                            <img src="/static/logos/image_2025-10-16_20-47-38.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/static/logos/image_2025-10-16_20-47-28.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/static/logos/image_2025-10-16_20-47-47.png" alt="">
+                        </a>
+                    </div>
+
+                    <button class="btn-get-started" onclick="toggleRegistration()">Sign In</button>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <img class="background-image" src="/static/photo/pexels-pixabay-355747.jpg" alt="background-mountain"  >
+        <div class="main-section">
+            <div id="hero" class="hero-block">
+                <h5>Change your life</h5>
+                <h1>Increase your <span>typing speed</span> </h1>
+                <p>High-speed printing saves your time and increases 
+                    productivity, allowing you to focus on the essence 
+                    of tasks rather than on the technical process. 
+                    In addition, it helps to keep the flow of thoughts 
+                    and not lose concentration when translating ideas 
+                    into text.
+                </p>
+
+                <button class="btn-hero-start"></button>
+            </div>
+
+            <div id="log" class="log-block hidden">
+                <h5>LOGIN</h5>
+                <input id="in-log"  type="text" placeholder="Login" />
+                <input id="in-pass" type="password" placeholder="Password" />
+                <button class="log-btn">LOGIN</button>     
+                <button class="sign-btn">Or sign up</button>              
+            </div>
+
+            
+            <div id="signup" class="sign-block hidden">
+                <h5>SIGNUP</h5>
+                <input type="text" id="nikname" placeholder=" Nikname">
+                <input type="text" id="email" placeholder=" Email">
+                <input type="text" id="age" placeholder=" Your age">
+                <input type="text" id="pass" placeholder=" Password">
+                <input type="text" id="againpass" placeholder=" Confirm password">
+                <button class="makeAcc-btn">MAKE ACC</button>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <section class="partners">
+        <div class="container-partners">
+            <div class="partners-line">
+                <a href="#">
+                    <img src="/static/companies/image_2025-10-15_20-09-04.png" alt="bitbucket">
+                </a>
+                <a href="#">
+                    <img src="/static/companies/image_2025-10-15_20-09-12.png" alt="watch">
+                </a>
+                <a href="#">
+                    <img src="/static/companies/image_2025-10-15_20-09-23.png" alt="facebook">
+                </a>
+                <a href="#">
+                    <img src="/static/companies/image_2025-10-15_20-09-31.png" alt="atlassian">
+                </a>
+                <a href="#">
+                    <img src="/static/companies/image_2025-10-15_20-09-40.png" alt="audi">
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

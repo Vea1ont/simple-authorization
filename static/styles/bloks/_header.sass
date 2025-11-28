@@ -1,0 +1,100 @@
+$main-black: #000000
+$main-white: #ffffff
+$gray: #a0a0a0
+$dark-gray: #202225
+$light-blue: #4d92fa 
+$color-hello-text: black  
+$br: 8px
+$animation-delay: 1s
+
+header
+    z-index: 1000
+    transform: translateY(-120%)
+    animation: start 0.4s ease-in forwards 
+
+.nav-container
+    max-width: 1206px
+    margin: 0 auto
+    margin-top: 10px
+    padding: 10px 
+    width: 100%
+    background-color: $dark-gray
+    border-radius: 20px
+    
+.z
+    cursor: pointer 
+    border: 0
+    height: 39px
+    width: 39px
+    border-radius: $br
+    color: black
+    background-color: black
+
+    img
+        border-radius: $br
+        width: 39px
+        object-fit: cover
+
+.nav-bar
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+.left-section
+    display: flex
+    align-items: center
+
+    ul
+        padding-left: 30px
+        list-style: none
+        display: flex
+        gap: 20px
+    
+    .nav-links li a
+        text-decoration: none
+        color: $gray
+        &:hover 
+            color: #ff00ff
+        
+
+    
+.right-section
+    display: flex
+    align-items: center
+
+    button
+        border-radius: $br
+
+    .nav-icons a
+        text-decoration: none
+        padding-left: 20px
+    .nav-icons a img
+        width: 25px
+    
+.btn-get-started
+    text-decoration: none
+    background-color: $main-black
+    color: $main-white
+    width: 100px
+    height: 39px
+    line-height: 39px
+    text-align: center
+    border-radius: $br
+    border: 0
+    font-family: 'Quicksand'
+    font-size: 15px
+    font-weight: 800
+    cursor: pointer
+    
+.nav-icons
+    padding-right: 20px
+
+@keyframes  start
+    0%
+        transform: translateY(-140%)
+
+
+
+    100%
+        transform: translateY(0%)

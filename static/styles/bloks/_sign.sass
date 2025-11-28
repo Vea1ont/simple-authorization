@@ -1,0 +1,57 @@
+@mixin inputs
+    border: 1px solid #4d92fa
+    border-radius: 5px
+    width: 350px
+    height: 35px
+
+.sign-block
+    transform: translate(0, -50%)
+    background-color: rgba(0, 0, 0, 0.5)
+    border-radius: $br
+    max-width: 450px
+    @media (min-width: 650px)
+        width: 350px
+    
+    padding: 30px 40px
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+
+    text-align: center
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 15px
+
+    opacity: 0
+    animation: fadeIn 0.4s ease-in forwards
+
+    h5
+        text-align: center
+        color: white
+        font-family: 'Quicksand'
+        margin: 0 auto
+        padding-top: 10px
+        padding-bottom: 10px
+
+    input
+        @include inputs
+
+    input:focus
+        outline: none
+
+
+    input::placeholder
+        padding-left: 10px
+    
+    input:focus::placeholder
+        color: transparent    
+
+.makeAcc-btn
+    color: white
+    background-color: black
+    border: 0
+    border-radius: 40px
+    width: 125px
+    height: 35px
+    margin-top: 10px
+    cursor: pointer
