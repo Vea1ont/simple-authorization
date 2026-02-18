@@ -1,0 +1,64 @@
+.typing-block
+    display: grid
+    grid-template-rows: auto 1fr auto  // три строки: настройки, слова, пустое место
+    gap: 15px
+    border-radius: $br
+    width: 90vw
+   
+    padding: 30px 40px
+
+    text-align: center
+
+    flex-direction: column
+    align-items: center
+    justify-content: ce
+    gap: 15px
+
+
+.typing-settings
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 8px
+    height: 30px
+    background-color: #202225
+    width: 650px
+
+    button
+        font-family: 'Quicksand'
+        font-size: 15px
+        font-weight: 800
+        border: 0
+        background: 0
+        color: #a0a0a0
+        padding-left: 15px
+        cursor: pointer
+        &:hover 
+            color: #ff00ff
+        
+
+.first  
+    border-right: 2px solid black
+    padding-right: 15px
+
+.zero
+    border-right: 2px solid black
+    padding-right: 15px
+
+
+.words-container
+    width: 1200px
+    .words-line
+        font-size: 40px
+        font-family: 'Quicksand'
+        font-weight: 800
+        color: #a0a0a0
+        height: 153px
+
+.btn-restart
+    background: none
+    border: none
+    
+    img
+        border: none
+        background: none

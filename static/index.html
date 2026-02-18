@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZType</title>
+    <title>ZTour</title>
     <link rel="stylesheet" href="static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,56 +42,280 @@
                             <img src="/static/logos/image_2025-10-16_20-47-47.png" alt="">
                         </a>
                     </div>
+                    
+                    <button class="btn-log-in">Log in</button>
+                    
+                    <div class="user-buttons-container hidden">
 
-                    <button class="btn-get-started" onclick="toggleRegistration()">Sign In</button>
+                        <button class="btn-profile">
+                            <img src="/static/logos/profile/image copy.png" alt="profile">
+                        </button>
+
+                        <button class="btn-logout">
+                            <img src="/static/logos/logout/icons8-logout-96.png" alt="exit">
+                        </button>
+
+                    </div>                    
                 </div>
-
             </nav>
         </div>
     </header>
 
     <main>
-        <img class="background-image" src="/static/photo/pexels-pixabay-355747.jpg" alt="background-mountain"  >
-        <div class="main-section">
-            <div id="hero" class="hero-block">
-                <h5>Change your life</h5>
-                <h1>Increase your <span>typing speed</span> </h1>
-                <p>High-speed printing saves your time and increases 
-                    productivity, allowing you to focus on the essence 
-                    of tasks rather than on the technical process. 
-                    In addition, it helps to keep the flow of thoughts 
-                    and not lose concentration when translating ideas 
-                    into text.
-                </p>
+        <section id="main-sec" class="main-section">
+            <img class="background-image" src="static/photo/pexels-pixabay-355747.jpg" alt="background-mountain">
 
-                <button class="btn-hero-start"></button>
+             <div id="hero" class="hero-block">
+                <h1>Лучшие курорты России</h1>
+                <h2>Горы. Скорость. Зима.</h2>
+                <h3>Горные курорты России - это скорость, свобода и настоящие зимние приключения.
+                    Мы подобрали лучшие горнолыжные туры 
+                    от Кавказа до Сибири,
+                    чтобы вы могли сосредоточиться на катании, а не планировать.
+                </h3>
+                <button class="btn-watch">
+                    Смотреть
+                </button>
             </div>
 
             <div id="log" class="log-block hidden">
-                <h5>LOGIN</h5>
-                <input id="in-log"  type="text" placeholder="Login" />
+                <h3>LOGIN</h3>
+                <input id="in-log"  type="text" placeholder="Email" />
                 <input id="in-pass" type="password" placeholder="Password" />
-                <button class="log-btn">LOGIN</button>     
-                <button class="sign-btn">Or sign up</button>              
+                <button class="btn-login">LOGIN</button>     
+                <button class="btn-or-register">Or Register</button>              
             </div>
 
             
-            <div id="signup" class="sign-block hidden">
-                <h5>SIGNUP</h5>
+            <div id="register" class="register-block hidden">
+                <h3>REGISTER</h3>
                 <input type="text" id="nikname" placeholder=" Nikname">
                 <input type="text" id="email" placeholder=" Email">
                 <input type="text" id="age" placeholder=" Your age">
                 <input type="text" id="pass" placeholder=" Password">
                 <input type="text" id="againpass" placeholder=" Confirm password">
                 <button class="makeAcc-btn">MAKE ACC</button>
+                <button class="btn-or-login">Or login</button>              
+            </div>
+            <div class="angle-scroll-block">
+                <img class="angle-scroll" src="/static/logos/angle/white-angle.png" alt="#">    
+                <img class="angle-scroll" src="/static/logos/angle/white-angle.png" alt="#">                                                    
+                <img class="angle-scroll" src="/static/logos/angle/white-angle.png" alt="#">    
+            </div>
+        </section>
+
+
+        <section class="first-tour">    
+            <div class="info-block">
+                <div class="info-text-block">
+                    <div class="info-main-text">
+                        <h2>КРАСНАЯ ПОЛЯНА</h2>
+                    </div>
+                
+
+                    <p>Крупный всесезонный горнолыжный курорт в Сочи у подножия Кавказских гор. 
+                        Зимний сезон — с декабря по май, с перепадом высот трасс примерно от 540 м до 2 170 
+                        м над уровнем моря. Это дает удобные склоны для новичков и опытных лыжников.</p>
+                    
+                    <p class="bold-text">Цены ориентировочно:</p>
+                    
+                    <p>• Однодневный ски-пасс — 3 900–5 000 ₽ для взрослых, дешевле для детей.</p>
+                    
+                    <p>• Многодневные карты, вечерние и семейные тарифы доступны отдельно.</p>
+
+                    <button id="tour-btn-id-1" class="tour-detail-btn">Подробнее</button>
+
+                </div>
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="/static/tours/1tour/krasnayaPolyana.png" alt="Красная поляна">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/1tour/trailsInKrasnaya.png" alt="Trails">
+                    </div>
+                    <div class="slide active">
+                        <img src="/static/tours/1tour/mountain.png" alt="raiders">
+                    </div>
+
+                    <div class="carousel-indicators"></div>
+                </div>
+                <script src="/static/JS/carousel.js" defer></script>
+            </div>
+        </section>
+    
+        <section class="second-tour">
+            <div class="info-block">
+                <div class="info-text-block">
+                    <div class="info-main-text">
+                        <h2>ДОМБАЙ</h2>
+                    </div>
+
+                   <p>Один из самых живописных курортов Северного Кавказа в долине реки Аманауз у подножия горы Мусса-Ачитара. Зимний сезон — с декабря по апрель, перепад высот от ~1 600 м до ~3 000 м над уровнем моря. Трассы разной сложности, включая легендарный склон «Маруха» для фрирайда.</p>
+   
+                   <p class="bold-text">Цены ориентировочно:</p>
+                   
+                   <p>• Однодневный ски-пасс — 2 800–3 500 ₽ для взрослых.</p>
+                   
+                   <p>• Многодневные карты и скидки для студентов доступны на месте.</p>
+                   <button id="tour-btn-id-2" class="tour-detail-btn">Подробнее</button>
+               </div>   
+               
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="/static/tours/2tour/image.png" alt="Dombai1">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/2tour/image copy.png"  alt="Dombai2">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/2tour/image copy 2.png" alt="Dombai2">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/2tour/image copy 3.png" alt="Dombai3">
+                    </div>
+
+                    
+                    <div class="carousel-indicators"></div>
+                </div>
+     
+                
+                <script src="/static/JS/carousel.js" defer></script>
             </div>
 
-        </div>
+        </section>
+    
+        <section class="third-tour">
+            <div class="info-block">
+                <div class="info-text-block">
+                    <div class="info-main-text">
+                        <h2>Приэльбрусье</h2> 
+                    </div>
+        
+                    <p>Крупнейший горнолыжный комплекс России у подножия горы Эльбрус. Сезон длится с ноября по май благодаря высокогорному расположению. Перепад высот — от ~2 000 м до ~3 847 м (с подъёмом на «Приют 11»). Идеален для продвинутых лыжников и сноубордистов.</p>
+        
+                    <p class="bold-text">Цены ориентировочно:</p>
+        
+                    <p>• Однодневный ски-пасс — 3 200–4 200 ₽.</p>
+        
+                    <p>• Подъём на высокогорные участки оплачивается отдельно.</p>
+                    
+                    <button id="tour-btn-id-3" class="tour-detail-btn">Подробнее</button>
+                </div>
+                
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="/static/tours/3tour/image.png" alt="PriElbrus">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/3tour/image copy.png"  alt="PriElbrus2">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/3tour/image copy 2.png" alt="PriElbrus3">
+                    </div>
+                    
+                    <div class="carousel-indicators"></div>
+                </div>
+        
+                <script src="/static/JS/carousel.js" defer></script>
 
+            </div>
+
+        </section>
+    
+        <section class="fourth-tour">
+            <div class="info-block">
+                <div class="info-text-block">
+                    <div class="info-main-text">
+                        <h2>Шерегеш</h2>
+                    </div>
+
+                    <p>Сибирская «Мекка» для сноубордистов и любителей целины в Горной Шории. Сезон — с ноября по апрель. Перепад высот трасс от ~1 250 м до ~1 850 м. Славится обильными снегопадами (до 5 м за сезон) и возможностью фрирайда вне трасс.</p>
+
+
+                    <p class="bold-text">Цены ориентировочно:</p>
+
+                    <p>• Однодневный ски-пасс — 2 500–3 300 ₽.</p>
+
+                    <p>• Ночные спуски и многодневные карты дешевле.</p>
+                    
+                    <button id="tour-btn-id-4" class="tour-detail-btn">Подробнее</button>
+
+                    
+
+                </div>
+
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="/static/tours/4tour/image.png" alt="Sheregesh">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/4tour/image copy.png"  alt="Sheregesh2">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/4tour/image copy 2.png" alt="Sheregesh3">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/4tour/image copy 3.png" alt="Sheregesh4">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/4tour/image copy 4.png" alt="Sheregesh5">
+                    </div>
+                    
+                    <div class="carousel-indicators"></div>
+                </div>
+        
+                <script src="/static/JS/carousel.js" defer></script>
+            </div>
+            
+        </section>
+    
+        <section class="fiveth-tour">
+            <div class="info-block">
+                <div class="info-text-block">
+                    <div class="info-main-text">
+                        <h2>Роза Хутор</h2>
+                    </div>
+
+                    <p>Олимпийский курорт с развитой инфраструктурой и самой длинной трассой в России («Эсто-Садовая», 6 км). Сезон — с декабря по апрель. Перепад высот от ~560 м до ~2 320 м. Подходит всем уровням подготовки, включая профессиональные трассы Красной поляны.</p>
+
+
+                    <p class="bold-text">Цены ориентировочно:</p>
+
+                    <p>• Однодневный ски-пасс — 4 200–5 500 ₽.</p>
+
+                    <p>• Раннее бронирование и многодневные карты выгоднее.</p>
+
+                    <button id="tour-btn-id-5" class="tour-detail-btn">Подробнее</button>
+                </div>
+
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="/static/tours/5tour/image.png" alt="Roza">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/5tour/image copy.png"  alt="Roza2">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/5tour/image copy 2.png" alt="Roza3">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/5tour/image copy 3.png" alt="Roza4">
+                    </div>
+                    <div class="slide">
+                        <img src="/static/tours/5tour/image copy 4.png" alt="Roza">
+                    </div>
+                    
+                    <div class="carousel-indicators"></div>
+                </div>
+        
+                <script src="/static/JS/carousel.js" defer></script>
+            </div>
+
+        </section>
     </main>
+    
 
-
-    <section class="partners">
+    <!-- <section class="partners">
         <div class="container-partners">
             <div class="partners-line">
                 <a href="#">
@@ -111,9 +336,9 @@
             </div>
         </div>
 
-    </section>
-
-
-    <script src="/static/scripts.js"></script>
+    </section> -->
 </body>
+<script src="/static/JS/scripts.js"></script>
+<script src="/static/JS/btn.js"></script>
 </html>
+

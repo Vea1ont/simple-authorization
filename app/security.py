@@ -29,7 +29,7 @@ def create_jwt_token(data: dict):
         # 1) этот токен был выдан моим сервером/клиентом
         # 2) содержимое токена не было изменено после выдачи
         
-def get_user_from_token(token: Annotated[str, Depends(auth2_scheme)]):
+def decode_token(token: Annotated[str, Depends(auth2_scheme)]):
     payload = jwt.decode(token, settings.SECRET_KEY, algorithms=settings.ALGORITHM)
     return payload.get('sub')
 

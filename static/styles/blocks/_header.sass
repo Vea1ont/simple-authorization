@@ -1,0 +1,153 @@
+$main-black: #000000
+$main-white: #ffffff
+$gray: #a0a0a0
+$dark-gray: #202225
+$light-blue: #4d92fa 
+$color-hello-text: black  
+$br: 8px
+$animation-delay: 1s
+
+@mixin btn-hover
+    background: linear-gradient(45deg, #2575fc, #6a11cb)
+    letter-spacing: 1px
+
+@mixin btn-activate
+    transform: translateY(2px) scale(0.98)
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
+    transition-duration: 0.1s
+
+@mixin str-hover
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3)
+    color: linear-gradient(45deg, #2575fc, #6a11cb)
+
+@mixin btn-profile-logout
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    width: 39px
+    height: 39px
+    line-height: 39px
+    border-radius: $br
+    border: 0
+    cursor: pointer
+    margin-left: 8px
+    background-color: black
+
+    &:hover
+        @include btn-hover
+    
+    &:active
+        @include btn-activate
+
+    img
+        width: 28px
+        height: 28px
+        display: block
+    
+
+header
+    z-index: 1000
+    transform: translateY(-120%)
+    animation: start 0.4s ease-in forwards 
+
+.nav-container
+    max-width: 1206px
+    margin: 0 auto
+    margin-top: 10px
+    padding: 10px 
+    width: 100%
+    background-color: $dark-gray
+    border-radius: 20px
+    
+.z
+    cursor: pointer 
+    border: 0
+    height: 39px
+    width: 39px
+    border-radius: $br
+    color: black
+    background-color: black
+
+    img
+        border-radius: $br
+        width: 39px
+        object-fit: cover
+
+.nav-bar
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+.left-section
+    display: flex
+    align-items: center
+
+    ul
+        padding-left: 30px
+        list-style: none
+        display: flex
+        gap: 20px
+    
+    .nav-links li a
+        text-decoration: none
+        color: $gray
+        &:hover 
+            color: #ff00ff
+        
+
+    
+.right-section
+    display: flex
+    align-items: center
+
+    button
+        border-radius: $br
+
+    .nav-icons a
+        text-decoration: none
+        padding-left: 20px
+    .nav-icons a img
+        width: 25px
+    
+.btn-log-in
+    text-decoration: none
+    background-color: $main-black
+    color: $main-white
+    width: 100px
+    height: 39px
+    line-height: 39px
+    text-align: center
+    border-radius: $br
+    border: 0
+    font-family: 'Quicksand'
+    font-size: 15px
+    font-weight: 800
+    cursor: pointer
+    &:hover
+        @include btn-hover
+    &:active
+        @include btn-activate
+        
+.user-buttons-container
+    display: flex
+    align-items: center
+    
+    .btn-profile
+        @include btn-profile-logout
+    .btn-logout
+        @include btn-profile-logout
+    
+        
+.nav-icons
+    padding-right: 20px
+
+@keyframes  start
+    0%
+        transform: translateY(-140%)
+
+
+
+    100%
+        transform: translateY(0%)

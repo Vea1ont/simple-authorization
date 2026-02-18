@@ -18,6 +18,4 @@ class Postgres:
     async def disconnect(self):
         if self.pool:  # ← Проверяем существование
             await self.pool.close()
-    def zxc(self):
-        pass
 database = Postgres(DATABASE_URL)

@@ -1,0 +1,78 @@
+@use "_header"
+
+@use "_fonts"
+
+@mixin hello-txt
+    text-align: center
+    color: $color-hello-text
+    font-family: 'Nimbus-Ultra-Light'
+    margin: 0 auto
+
+
+@keyframes fadeIn 
+    0%  
+        opacity: 0
+
+    100%
+        opacity: 1
+
+
+.hero-block
+    transform: translate(0, -40%)
+    background-color: rgba(255, 255, 255, 0.8)
+    border-radius: 20px
+    max-width: 650px
+    width: 90vw
+    @media (min-width: 650px)
+        width: 650px
+    
+    padding: 30px 40px
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+
+    text-align: center
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 15px
+
+    h1
+        @include hello-txt
+        font-size: 50px
+        font-weight: 100
+        padding-top: 20px
+    
+    h2
+        @include hello-txt
+        color: blue
+
+    h3
+        @include hello-txt
+        padding-top: 20px
+  
+
+
+    opacity: 0
+    animation: fadeIn 0.4s ease-in forwards
+
+.btn-watch
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px
+    font-family: 'Nimbus-Medium'
+    border: none
+    border-radius: $br
+    height: 55px
+    width: 180px
+    color: white
+    background-color: blue
+    margin-top: 20px
+    cursor: pointer
+    padding: 0
+    &:hover
+        background: black
+
+        font-size: 33px
+    &:active
+        @include btn-activate
