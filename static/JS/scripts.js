@@ -119,7 +119,7 @@ document.querySelector('.btn-login').addEventListener('click', async function() 
 
     try {
         // Отправляем POST запрос на эндпоинт /login с данными пользователя
-        const result = await postData('/login', {
+        const result = await postData('/auth/login', {
             email: email,        // Почта пользователя
             password: password   // Пароль пользователя
         });
@@ -192,7 +192,7 @@ document.querySelector('.makeAcc-btn').addEventListener('click', async function(
 
     try {
         // Отправляем POST запрос на эндпоинт /register с данными регистрации
-        const result = await postData('/register', {
+        const result = await postData('/auth/register', {
             name: name,                     // Имя пользователя
             email: email,                   // Email (обязательное поле)
             password: password,             // Пароль

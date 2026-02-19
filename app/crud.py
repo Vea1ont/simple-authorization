@@ -1,8 +1,8 @@
 from app.db import database
-from datetime import datetime, timzone
+from datetime import datetime, timezone
 
 async def create_user(name, hashed_password, email, age):
-    created_at = datetime.now(timzone.utc)
+    created_at = datetime.now(timezone.utc)
     query = """
         INSERT INTO users (name, hashed_password, email, age, created_at)
         VALUES ($1, $2, $3, $4, $5)
@@ -12,7 +12,7 @@ async def create_user(name, hashed_password, email, age):
 
 async def get_user_by_email(email):
     query = "SELECT * FROM users WHERE email = $1"
-    async with database.poll.acquire() as connection:
+    async with database.pool.acquire() as connection:
         result = await connection.fetchrow(query, email)
         return result
     
@@ -24,5 +24,5 @@ async def update_last_login(user_id, ip, user_agent):
             last_user_agent = $2
         WHERE id = $3
     """
-    async with database.poll.acquire() as connection:
+    async with database.pool.acquire() as connection:
         await connection.execute(query, ip, user_agent, user_id)

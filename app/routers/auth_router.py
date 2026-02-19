@@ -4,7 +4,6 @@ from app.db import database
 from app.models import Register, LogIn
 from app.security import hash_password, verify_password, create_jwt_token
 from app.crud import create_user, update_last_login, get_user_by_email
-from datetime import datetime, timezone
 
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
@@ -12,7 +11,7 @@ router = APIRouter(prefix="/auth", tags=["Auth"])
 @router.post("/register")
 async def register(user: Register):
     hashed_password = hash_password(user.password)    
-    await create_user(user.name, hashed_password, user.mail, user.age)
+    await create_user(user.name, hashed_password, user.email, user.age)
     return {"message": "User created successfully"}
         
 @router.post("/login")

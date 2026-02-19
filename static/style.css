@@ -1,7 +1,11 @@
 header {
-  z-index: 1000;
   transform: translateY(-120%);
   animation: start 0.4s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -168,9 +172,13 @@ header {
   }
 }
 header {
-  z-index: 1000;
   transform: translateY(-120%);
   animation: start 0.4s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -548,64 +556,40 @@ header {
 }
 
 .main-section {
+  position: relative;
+  background-image: url("/static/photo/pexels-pixabay-355747.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   height: 95vh;
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  height: 100dvh;
 }
 
-.first-tour {
-  display: flex;
-  height: calc(100vh - 60px);
+main section:not(.main-section) {
   width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.second-tour {
+  min-height: 100vh;
   display: flex;
-  height: calc(100vh - 60px);
-  width: 100%;
-  justify-content: center;
   align-items: center;
-}
-
-.third-tour {
-  display: flex;
-  height: calc(100vh - 60px);
-  width: 100%;
   justify-content: center;
-  align-items: center;
-}
-
-.fourth-tour {
-  display: flex;
-  height: calc(100vh - 60px);
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.fiveth-tour {
-  display: flex;
-  height: calc(100vh - 60px);
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 0;
 }
 
 .info-block {
   display: flex;
   gap: 20px;
   max-height: 800px;
+  text-align: center;
 }
 
 .info-main-text {
   display: inline-block;
   background-color: blue;
   border-radius: 20px;
-  text-align: center;
   letter-spacing: 5px;
   padding: 5px;
 }
@@ -748,9 +732,13 @@ header {
   }
 }
 header {
-  z-index: 1000;
   transform: translateY(-120%);
   animation: start 0.4s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -940,9 +928,13 @@ header {
 }
 
 header {
-  z-index: 1000;
   transform: translateY(-120%);
   animation: start 0.4s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -1193,9 +1185,13 @@ header {
 }
 
 header {
-  z-index: 1000;
   transform: translateY(-120%);
   animation: start 0.4s ease-in forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {

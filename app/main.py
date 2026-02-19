@@ -1,3 +1,4 @@
+import logfire 
 import uvicorn
 
 from fastapi import FastAPI, HTTPException, Request
@@ -8,11 +9,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.db import database
 
 from app.routers import auth_router
+from app.routers import profile_router
 
-
+logfire.configure()
 
 
 app = FastAPI()
+
+logfire.instrument_fastapi(app)
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,6 +28,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router.router)
+app.include_router(profile_router.router_profile)
 
 @app.get("/")
 def read_root():
@@ -37,6 +43,7 @@ async def shutdown():
     await database.disconnect()  # ← Корректное закрытие
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
     
     
 if __name__ == "__main__":
